@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", serif;
+}
+/*Barra de navegación y footer: 16px
+Título: 32px
+Tarjetas: 14px 
+Ancho de pantalla en diseño: 1280px
+Márgenes y paddings base: 8px, 16px, 32px, ...*/
+:root {
+  --white: #ffffff;
+  --black: #212429;
+}
+
+body {
+  background-color: var(--white);
+}
+.navigation {
+    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 2px solid var(--black);
+  position: fixed;
+  top: 0;
+  
+  
+}
+.navigation__links,
+.navigation__icons {
+  display: none;
+}
+
+.content-products h1 {
+  font-size: 32px;
+  padding: 16px;
+  padding-bottom: 32px;
+  margin-top: 62px;
+}
+.content-products__items {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-self: center;
+  gap: 56px;
+}
+.content-products__items article img {
+  border-radius: 8px;
+}
+.content-products__items article p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 16px 0 16px;
+  font-size: 14px;
+}
+.content-products__items article p strong {
+  font-size: 16px;
+}
+
+.content-footer {
+  background-color: var(--black);
+  margin-top: 48px;
+  padding: 32px;
+  padding-top: 0;
+}
+.content-footer ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+/* .content-footer ul li{
+    border-bottom: 2px solid var(--white);
+} */
+.content-footer ul li a {
+  text-decoration: none;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 2px solid var(--white);
+  padding: 24px 0;
+  font-weight: 700;
+}
+.content-footer ul li a div {
+  background-color: var(--white);
+  border-radius: 50%;
+  padding: 8px;
+}
+@media (min-width: 920px) {
+  .navigation__links,
+  .navigation__icons {
+    display: flex;
+  }
+  .content-products__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-self: center;
+  }
+}
