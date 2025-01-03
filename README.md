@@ -1,1 +1,1 @@
-# Pagina web de una tienda de ropa.
+# Tienda de Ropa Online
